@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giacomo Fenzi Foundation</title>
+    <meta
+      name="description"
+      content="The Giacomo Fenzi Foundation is a satirical institution dedicated to placeholder progress, placeholder impact, and placeholder admiration."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f1ea;
+        --ink: #1f1b16;
+        --muted: #6f645b;
+        --accent: #b45a3c;
+        --accent-2: #2f6f6b;
+        --card: #fff7ec;
+        --line: #e4d7c6;
+        --shadow: 0 18px 50px rgba(31, 27, 22, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(1100px 760px at 90% -10%, #f3dcc6 0%, rgba(243, 220, 198, 0) 55%),
+          radial-gradient(920px 600px at -10% 18%, #dfe8e3 0%, rgba(223, 232, 227, 0) 60%),
+          var(--bg);
+        color: var(--ink);
+        min-height: 100vh;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 8px 0 32px;
+      }
+
+      nav {
+        display: flex;
+        gap: 18px;
+        font-size: 0.95rem;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+      }
+
+      nav a:hover {
+        border-color: var(--accent);
+        color: var(--ink);
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 32px;
+        align-items: center;
+        padding: 24px 0 28px;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.8rem, 4vw, 4rem);
+        margin: 0 0 16px;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 0 0 20px;
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--ink);
+        color: #fdf8f1;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+      }
+
+      .highlight {
+        display: grid;
+        gap: 18px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .highlight strong {
+        font-size: 1.1rem;
+        letter-spacing: 0.01em;
+      }
+
+      section {
+        margin-top: 20px;
+      }
+
+      section h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin-bottom: 16px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: #fffaf2;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        min-height: 160px;
+        box-shadow: 0 12px 30px rgba(30, 27, 23, 0.08);
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .card p,
+      .card ul {
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .list-stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .list-item {
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: #fffdf8;
+        display: grid;
+        gap: 6px;
+      }
+
+      .list-item strong {
+        color: var(--accent);
+      }
+
+      footer {
+        margin-top: 80px;
+        padding: 24px 0 12px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">Giacomo Fenzi Foundation</div>
+        <nav>
+          <a href="#reading">Required Reading</a>
+          <a href="#activities">Activities</a>
+          <a href="#donations">Recent Donations</a>
+          <a href="#initiatives">Initiatives</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <div class="pill">Placeholder location · Placeholder year · Placeholder motto</div>
+          <h1>Satire meets service.</h1>
+          <p>
+            Placeholder copy celebrating the mythical achievements of the Giacomo Fenzi Foundation. Replace
+            with your mission statement, impact story, and curated admiration.
+          </p>
+          <a class="cta" href="#donations">Placeholder action →</a>
+        </div>
+        <div class="highlight">
+          <strong>Foundation at a glance</strong>
+          <div class="list-stack">
+            <div>🏛️ Placeholder headquarters</div>
+            <div>🧪 Placeholder research division</div>
+            <div>✨ Placeholder impact rating</div>
+            <div>📜 Placeholder charter notes</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reading">
+        <h2>Required Reading</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Placeholder Volume I</h3>
+            <p>Placeholder synopsis of the foundational manifesto and its curated insights.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Compendium</h3>
+            <p>Placeholder highlights of speeches, quotes, and selective accolades.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Annual Review</h3>
+            <p>Placeholder reporting on progress, priorities, and celebratory metrics.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities">
+        <h2>Foundation Activities</h2>
+        <p class="muted">Placeholder overview of ongoing programs and thoughtfully satirical initiatives.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Placeholder Research Grants</h3>
+            <p>Placeholder description of scientific exploration and benevolent curiosity.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Fellowships</h3>
+            <p>Placeholder details on scholarships, residencies, and inspired projects.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Symposiums</h3>
+            <p>Placeholder summary of events, panels, and elegant discussions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="donations">
+        <h2>Recent Donations</h2>
+        <div class="list-stack">
+          <div class="list-item">
+            <strong>€00,000</strong>
+            <span class="muted">Placeholder donor · Placeholder note of gratitude.</span>
+          </div>
+          <div class="list-item">
+            <strong>€00,000</strong>
+            <span class="muted">Placeholder donor · Placeholder impact statement.</span>
+          </div>
+          <div class="list-item">
+            <strong>€00,000</strong>
+            <span class="muted">Placeholder donor · Placeholder commemoration.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="initiatives">
+        <h2>Upcoming Initiatives</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Placeholder Initiative A</h3>
+            <p>Placeholder description of a bold, ambitious, and delightfully theatrical idea.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Initiative B</h3>
+            <p>Placeholder description of community outreach and research excellence.</p>
+          </div>
+          <div class="card">
+            <h3>Placeholder Initiative C</h3>
+            <p>Placeholder description of cultural programming and curated storytelling.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>Giacomo Fenzi Foundation · Placeholder locale</div>
+        <div>© Placeholder year · Designed with care.</div>
+      </footer>
+    </main>
+  </body>
+</html>
